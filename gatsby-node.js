@@ -9,11 +9,11 @@ const path = require('path')
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const legalTemplate = path.resolve('./src/templates/legal.js')
+  const postTemplate = path.resolve('./src/templates/post.js')
 
-  const legal = await graphql(`
+  const post = await graphql(`
     {
-      allMdx(filter: { frontmatter: { siteSection: { eq: "legal" } } }) {
+      allMdx(filter: { frontmatter: { contentType: { eq: "post" } } }) {
         edges {
           node {
             frontmatter {
@@ -25,15 +25,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  if (legal.errors) {
-    console.log(legal.errors)
+  if (post.errors) {
+    console.log(post.errors)
     reporter.panicOnBuild(`Error while running GraphQL query.`)
   }
 
-  legal.data.allMdx.edges.forEach(({ node }) => {
+  post.data.allMdx.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
-      component: legalTemplate,
+      component: postTemplate,
     })
   })
 }

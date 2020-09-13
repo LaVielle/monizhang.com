@@ -4,7 +4,7 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import { MDX } from '../components/MDX'
 
-export default function LegalTemplate({ data: { mdx } }) {
+export default function PostTemplate({ data: { mdx } }) {
   return (
     <Layout>
       <SEO title={mdx.frontmatter.title} />
@@ -15,8 +15,8 @@ export default function LegalTemplate({ data: { mdx } }) {
   )
 }
 
-export const legalQuery = graphql`
-  query LegalByPath($path: String!) {
+export const postQuery = graphql`
+  query PostByPath($path: String!) {
     mdx(frontmatter: { path: { eq: $path } }) {
       body
       id

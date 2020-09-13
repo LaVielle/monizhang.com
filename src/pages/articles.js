@@ -27,10 +27,6 @@ const ArticlesPage = () => {
   return (
     <Layout>
       <SEO title="Articles" />
-      {/*<Img*/}
-      {/*  className="h-32 sm:h-64"*/}
-      {/*  fluid={imageData.allFile.edges[0].node.childImageSharp.fluid}*/}
-      {/*/>*/}
       <h1>Articles</h1>
       {articlesData.allMdx.edges.map(el => (
         <Link to={el.node.frontmatter.path} key={el.node.frontmatter.title}>
