@@ -47,3 +47,10 @@ Once you've formatted the file correctly (give it a name, fill in metadata secti
 At the bottom of the page you'll see a ` Commit new file` section.
 Make sure that ` Commit directly to the master branch.` is selected and simply click the `Commit new file` button at the bottom of the page.
 This will trigger a build process that you don't need to worry about and you should see the changes on your live withing a few minutes.
+
+### Update a post
+To update a post, go to that post on GitHub and click the pen icon at the top right of the file.
+Make the edits you need and press `Commit changes` at the bottom of the page when you're ready (make sure `Commit directly to the master branch` is checked).
+Your changes will be deployed automatically just like when you create a new post, and you should see them on your live site within a few minutes.
+
+*Note: If you change the metadata `path`, old links to that page won't work anymore. For example of you change if from `/posts/hello` to `/posts/hi`, monizhang.com/posts/hello won't work anymore.*
