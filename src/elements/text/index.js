@@ -6,7 +6,6 @@ export const Header1 = props => {
       <h1 className="font-semibold text-4xl my-4" {...props}>
         {props.children}
       </h1>
-      <div className="border border-b-2 border-gray-200" />
     </>
   )
 }
@@ -28,9 +27,14 @@ export const Header3 = props => {
 }
 
 export const Paragraph = props => {
+  const { extraClassName, ...rest } = props
   return (
-    <p className="mb-6 leading-loose" {...props}>
+    <p className={`mb-6 leading-loose ${extraClassName}`} {...rest}>
       {props.children}
     </p>
   )
+}
+
+export const Divider = () => {
+  return <div className="border border-b-2 border-gray-200" />
 }
