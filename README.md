@@ -8,7 +8,7 @@ To make the writing experience more pleasant, make sure to use a mardown editor 
 
 Once you've written your post, you're ready to add it to your site!
 
-*Note: If you need to add more complex elements to your post, such as images or videos, as Sam!*
+*Note: If you need to add more complex elements to your post, such as images or videos, ask Sam!*
 
 ### Add a post
 The easiest way to add a new file to the project is by using the GitHub interface. The following link creates a new file in `src/assets/posts`, which is the directory in which all posts live:
